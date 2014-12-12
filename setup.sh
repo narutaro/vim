@@ -15,8 +15,20 @@ echo "filetype plugin indent on" >> ~/.vimrc
 
 # Install Plugins
 cd ~/.vim/bundle && \
+
+# Nerdtree
 git clone https://github.com/scrooloose/nerdtree.git
+
+# Lightline
 git clone https://github.com/itchyny/lightline.vim.git
+echo "set laststatus=2" >> ~/.vimrc
+
+# indentLine
 git clone https://github.com/Yggdroot/indentLine.git
-#git clone https://github.com/tomasr/molokai.git
+
+# molokai
+cd ~/.vim && \
 git clone https://github.com/fatih/molokai.git
+cp -r ~/.vim/molokai/colors .
+echo "colorscheme molokai" >> ~/.vimrc
+
