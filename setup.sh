@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Just in case - debian
+sudo apt-get install vim-gui-common -y
+sudo apt-get install vim-runtime -y
+
 # Install Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
