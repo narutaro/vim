@@ -13,7 +13,7 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 echo '" Pathogen' 
 echo 'execute pathogen#infect()' >> ~/.vimrc
 echo 'syntax on' >> ~/.vimrc
-echo 'filetype plugin indent on' >> ~/.vimrc
+#echo 'filetype plugin indent on' >> ~/.vimrc
 
 # Install Plugins
 cd ~/.vim/bundle && \
@@ -32,10 +32,15 @@ echo 'set laststatus=2' >> ~/.vimrc
 git clone https://github.com/Yggdroot/indentLine.git
 ln -s ~/.vim/bundle/indentLine/after/plugin/indentLine.vim ~/.vim/bundle/indentLine.vim
 
-# molokai
+# Color schemes
 cd ~/.vim && \
-git clone https://github.com/fatih/molokai.git
+#git clone https://github.com/fatih/molokai.git
+git clone https://github.com/flazz/vim-colorschemes.git
 #cp -r ~/.vim/molokai/colors .
-ln -s ~/.vim/molokai/colors ./colors
-echo '" Molokai' >> ~/.vimrc
-echo 'colorscheme molokai' >> ~/.vimrc
+ln -s ~/.vim/vim-colorschemes/colors ./colors
+color_schemes=`ls ~/.vim/colors`
+echo '" uncomment the color scheme you want to use' >> ~/.vimrc
+for cs in $color_schemes; do
+  echo "\" colorscheme $cs" >> ~/.vimrc
+done
+echo '" uncomment the color scheme you want to use in .vimrc'
