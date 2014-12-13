@@ -1,6 +1,6 @@
 #!/bin/sh
-mv ~/.vim ~/.vim.back
-mv ~/.vimrc ~/.vimrc.back
+rm -fr ~/.vim
+rm ~/.vimrc
 
 # Just in case - debian
 sudo apt-get install vim-gui-common -y
@@ -29,18 +29,16 @@ echo '" Lightline' >> ~/.vimrc
 echo 'set laststatus=2' >> ~/.vimrc
 
 # indentLine
-git clone https://github.com/Yggdroot/indentLine.git
-ln -s ~/.vim/bundle/indentLine/after/plugin/indentLine.vim ~/.vim/bundle/indentLine.vim
+# echo '" indentLine' >> ~/.vimrc
+# git clone https://github.com/Yggdroot/indentLine.git
+# ln -s ~/.vim/bundle/indentLine/after/plugin/indentLine.vim ~/.vim/bundle/indentLine.vim
 
 # Color schemes
 cd ~/.vim && \
-#git clone https://github.com/fatih/molokai.git
 git clone https://github.com/flazz/vim-colorschemes.git
-#cp -r ~/.vim/molokai/colors .
-ln -s ~/.vim/vim-colorschemes/colors ./colors
+ln -s ~/.vim/vim-colorschemes/colors ./colors && \
 color_schemes=`ls ~/.vim/colors`
-echo '" uncomment the color scheme you want to use' >> ~/.vimrc
 for cs in $color_schemes; do
-  echo "\" colorscheme $cs" >> ~/.vimrc
+  echo "\"colorscheme $cs" | sed -e s/\.vim// >> ~/.vimrc
 done
-echo '" uncomment the color scheme you want to use in .vimrc'
+echo "Please uncomment colorscheme you want to use in .vimrc"
