@@ -1,6 +1,6 @@
 #!/bin/sh
-rm -fr ~/.vim
-rm ~/.vimrc
+mv ~/.vim ~/.vim.back
+mv ~/.vimrc ~/.vimrc.back
 
 # Just in case - debian
 sudo apt-get install vim-gui-common -y
