@@ -28,6 +28,10 @@ git clone https://github.com/itchyny/lightline.vim.git
 echo '" Lightline' >> ~/.vimrc
 echo 'set laststatus=2' >> ~/.vimrc
 
+# Other
+echo 'set tabstop=2' | tee ~/.vimrc
+echo 'set number' | tee ~/.vimrc
+
 # indentLine
 # echo '" indentLine' >> ~/.vimrc
 # git clone https://github.com/Yggdroot/indentLine.git
