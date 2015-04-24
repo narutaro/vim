@@ -16,7 +16,7 @@ echo 'syntax on' >> ~/.vimrc
 #echo 'filetype plugin indent on' >> ~/.vimrc
 
 # Install Plugins
-cd ~/.vim/bundle && \
+cd ~/.vim/bundle
 
 # Nerdtree
 git clone https://github.com/scrooloose/nerdtree.git
