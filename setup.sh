@@ -2,10 +2,13 @@
 rm -fr ~/.vim
 rm ~/.vimrc
 
+# vim
+sudo apt-get update && sudo apt-get install vim -y
+
 # Just in case - debian
-sudo apt-get install vim-gui-common -y
-sudo apt-get install vim-runtime -y
-sudo apt-get install curl -y
+#sudo apt-get install vim-gui-common -y
+#sudo apt-get install vim-runtime -y
+#sudo apt-get install curl -y
 
 # Install Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
