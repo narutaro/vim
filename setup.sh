@@ -16,7 +16,8 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 echo '" Pathogen' >> ~/.vimrc
 echo 'execute pathogen#infect()' >> ~/.vimrc
-echo 'syntax on' >> ~/.vimrc
+echo 'syntax enable' >> ~/.vimrc
+echo '"let g:NERDTreeDirArrows=0' >> ~/.vimrc
 #echo 'filetype plugin indent on' >> ~/.vimrc
 
 # Install Plugins
