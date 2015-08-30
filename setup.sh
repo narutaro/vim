@@ -50,4 +50,7 @@ color_schemes=`ls ~/.vim/colors`
 for cs in $color_schemes; do
   echo "\"colorscheme $cs" | sed -e s/\.vim// >> ~/.vimrc
 done
+
+sed -i "s/\"colorscheme molokai/colorscheme molokai/"  ~/.vimrc
+
 echo "Please uncomment colorscheme you want to use in .vimrc"
