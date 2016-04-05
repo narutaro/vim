@@ -51,7 +51,7 @@ for cs in $color_schemes; do
   echo "\"colorscheme $cs" | sed -e s/\.vim// >> ~/.vimrc
 done
 
-sed -i "s/\"colorscheme Morokai/colorscheme Morokai/"  ~/.vimrc
+sed -i "s/\"colorscheme Monokai/colorscheme Monokai/"  ~/.vimrc
 
 echo "Please uncomment colorscheme you want to use in .vimrc"
 
