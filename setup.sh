@@ -54,3 +54,5 @@ done
 sed -i "s/\"colorscheme Morokai/colorscheme Morokai/"  ~/.vimrc
 
 echo "Please uncomment colorscheme you want to use in .vimrc"
+
+cd
